@@ -12,13 +12,13 @@ if (!function_exists('e')) {
      * except with htmlentities(), all characters which have HTML character entity equivalents are
      * translated into these entities.
      *
-     * @param string|null $string
-     *
+     * @param mixed $string
+     * @param bool  $stripTags
      * @return string
      */
-    function e(string $string = null): string
+    function e($string = null, bool $stripTags = false): string
     {
-        return \Spiral\Helpers\Strings::escape($string);
+        return \Spiral\Helpers\Strings::escape($string, $stripTags);
     }
 }
 

@@ -23,4 +23,18 @@ class FunctionsTest extends TestCase
         $result = interpolate("Hello [name]", ['name' => 'Anton'], '[', ']');
         $this->assertSame('Hello Anton', $result);
     }
+
+    public function testE()
+    {
+        $this->assertSame('', e('', true));
+        $this->assertSame('', e($this, true));
+        $this->assertSame('', e('', false));
+        $this->assertSame('', e(null, false));
+        $this->assertSame('hello', e('<b>hello</b>', true));
+        $this->assertSame(
+            '&lt;b&gt;hello&lt;/b&gt;',
+            e('<b>hello</b>', false)
+        );
+    }
+
 }
