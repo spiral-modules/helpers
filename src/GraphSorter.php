@@ -5,6 +5,7 @@
  * @license   MIT
  * @author    Anton Titov (Wolfy-J)
  */
+declare(strict_types=1);
 
 namespace Spiral\Helpers;
 
@@ -12,9 +13,9 @@ namespace Spiral\Helpers;
  * Topological Sorting vs Depth First Traversal (DFS)
  * https://en.wikipedia.org/wiki/Topological_sorting.
  */
-class GraphSorter
+final class GraphSorter
 {
-    const STATE_NEW = 1;
+    const STATE_NEW    = 1;
     const STATE_PASSED = 2;
 
     /** @var array string[] */

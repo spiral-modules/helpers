@@ -5,13 +5,14 @@
  * @license   MIT
  * @author    Anton Titov (Wolfy-J)
  */
+declare(strict_types=1);
 
 namespace Spiral\Helpers;
 
 use Cocur\Slugify\Slugify;
 use Cocur\Slugify\SlugifyInterface;
 
-class Strings
+final class Strings
 {
     /** @var SlugifyInterface */
     private static $slugify;
