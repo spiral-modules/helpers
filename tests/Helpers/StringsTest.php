@@ -21,11 +21,10 @@ class StringsTest extends TestCase
         $this->assertSame(64, strlen(Strings::random(64)));
     }
 
-    /**
-     * @expectedException \RuntimeException
-     */
     public function testRandomBad()
     {
+        $this->expectException(\RuntimeException::class);
+
         Strings::random(0);
     }
 
